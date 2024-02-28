@@ -36,7 +36,7 @@ var questions = [
         answer: "// This is a comment"
     },
     {
-        prompt: "JavaScript file has an extension of...",
+        prompt: "JavaScripts file have an extension of...",
         choices: [".java", ".js", ".javascript", ".xml"],
         answer: ".js"
     },
