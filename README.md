@@ -22,7 +22,7 @@
 8. Contact
 
 ## 1. Project Description
-This project is a Quiz App to test your knowledge of Javascript. It is a 10 question quiz, with a 75 second timer. The user has 75 seconds to answer all 10 questions. If the user answers a question incorrectly, 10 seconds are subtracted. If the user answers a question correctly, nothing happens. Each correct answer is worth 10 points while each incorrect answer is worst 0 points. The user is able to save their initials and score.
+This project is a Quiz App to test your knowledge of Javascript. It is a 10 question quiz, with a 75 second timer. The user has 75 seconds to answer all 10 questions. If the user answers a question incorrectly, 10 seconds are subtracted. If the user answers a question correctly, nothing happens. Each correct answer is worth 10 points while each incorrect answer is worth 0 points. The user is able to save their initials and score.
 
 ## 2. User Story
 - AS A coding boot camp student
