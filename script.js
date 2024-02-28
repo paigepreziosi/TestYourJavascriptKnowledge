@@ -59,3 +59,77 @@ var questions = [
         answer: "const"
     },
 ];
+
+var currentQuestionIndex = 0;
+var time = questions.length * 7.5;
+var timerId;
+
+function quizStart() {
+    timerId = setInterval(clockTick,1000);
+	timerEl.textContent = time;
+	let landingScreenEl = document.getElementById("startscreen");
+	landingScreenEl.setAttribute("class", "hide");
+	questionsEl.removeAttribute("class");
+	getQuestion();
+}
+
+
+function getQuestion() {
+	let currentQuestion = questions[currentQuestionIndex];
+	let promptEl = document.getElementById("quizquestions");
+	promptEl.textContent = currentQuestion.prompt;
+	choicesEl.innerHTML = "";
+	currentQuestion.choices.forEach(
+		function (choice, i) {
+			let choiceBtn = document.createElement("button");
+			choiceBtn.setAttribute("value", choice);
+			choiceBtn.textContent = i + 1 + ". " + choice;
+			choiceBtn.onclick = questionClick;
+			choicesEl.appendChild(choiceBtn);
+		}
+	);
+}
+
+function questionClick() {
+    if (this.value !== questions[currentQuestionIndex].answer) {
+        time -= 10;
+        if (time < 0) {
+            time = 0;
+        }
+        timerEl.textContent = time;
+        feedbackEl.textContent = `Wrong! The correct answer is: ${questions[currentQuestionIndex].answer}.`;
+        feedbackEl.style.color = "red";
+    } else {
+        feedbackEl.textContent = "Correct!";
+        feedbackEl.style.color = "green";
+        correctAnswers++; 
+    }
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function () {
+        feedbackEl.setAttribute("class", "feedback hide");
+    }, 2000);
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
+}
+
+function quizEnd() {
+    clearInterval(timerId);
+    let endScreenEl = document.getElementById("quizend");
+    endScreenEl.removeAttribute("class");
+    let finalScoreEl = document.getElementById("scorefinal");
+    let finalScore = correctAnswers * scoreMultiplier;
+    finalScoreEl.textContent = finalScore; 
+    questionsEl.setAttribute("class", "hide");
+}
+
+function clockTick() {
+	time--;
+	timerEl.textContent = time;
+	if (time <= 0) {
+		quizEnd();
+	}
+}
