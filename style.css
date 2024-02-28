@@ -1,0 +1,92 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.quiz,
+.scores {
+	margin: 30px auto 0 auto;
+	max-width: 400px;
+}
+
+#top {
+	color: grey;
+}
+
+.containerNew {
+	border: 2px solid black;
+    border-radius: 10px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	height: auto;
+	width: 650px;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+}
+
+p {
+	margin: 15px 15px;
+}
+
+.landing {
+	text-align: center;
+}
+
+
+.timer {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+button {
+	display: inline-block;
+	margin: 10px;
+	cursor: pointer;
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+	border: 2px solid;
+	padding: 10px;
+}
+
+button:hover {
+	background-color: black;
+    color: white;
+}
+
+.button {
+	display: block;
+}
+
+input[type="text"] {
+	font-size: 100%;
+}
+
+.hide {
+	display: none;
+}
+
+.feedback {
+	font-style: bold;
+	font-size: 120%;
+	margin-top: 20px;
+	padding-top: 15px;
+	color: #fff;
+	border-top: 2px solid black;
+}
+
+ol {
+	padding-left: 15px;
+	max-height: 600px;
+	overflow: auto;
+}
+
+li {
+	padding: 5px;
+	list-style: decimal inside none;
+}
+
+li:nth-child(odd) {
+	background-color: #dfdae7;
+}
