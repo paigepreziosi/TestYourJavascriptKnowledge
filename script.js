@@ -6,6 +6,11 @@ var startBtn = document.querySelector("#start");
 var nameEl = document.querySelector("#name");
 var feedbackEl = document.querySelector("#feedback");
 var reStartBtn = document.querySelector("#restart");
+var correctAnswers = 0;
+var scoreMultiplier = 10;
+var currentQuestionIndex = 0;
+var time = questions.length * 7.5;
+var timerId;
 
 var questions = [
     {
@@ -133,3 +138,25 @@ function clockTick() {
 		quizEnd();
 	}
 }
+
+function saveHighscore() {
+	let name = nameEl.value.trim();
+	if (name !== "") {
+		let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+		let newScore = {score: time, name: name,};
+		highscores.push(newScore);
+		window.localStorage.setItem("highscores",JSON.stringify(highscores));
+		alert("Your score has been submitted");
+	}
+}
+
+
+function checkForEnter(event) {
+	if (event.key === "Enter") {saveHighscore(); 
+        alert("Your score has been submitted");
+	}
+}
+
+nameEl.onkeyup = checkForEnter;
+submitBtn.onclick = saveHighscore;
+startBtn.onclick = quizStart;
