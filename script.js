@@ -8,9 +8,6 @@ var feedbackEl = document.querySelector("#feedback");
 var reStartBtn = document.querySelector("#restart");
 var correctAnswers = 0;
 var scoreMultiplier = 10;
-var currentQuestionIndex = 0;
-var time = questions.length * 7.5;
-var timerId;
 
 var questions = [
     {
@@ -143,7 +140,7 @@ function saveHighscore() {
 	let name = nameEl.value.trim();
 	if (name !== "") {
 		let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-		let newScore = {score: time, name: name,};
+		let newScore = {score: correctAnswers * scoreMultiplier, name: name,};
 		highscores.push(newScore);
 		window.localStorage.setItem("highscores",JSON.stringify(highscores));
 		alert("Your score has been submitted");
