@@ -1,3 +1,14 @@
+
+<img width="1414" alt="Screenshot 2024-02-28 at 2 39 48 PM" src="https://github.com/paigepreziosi/TestYourJavascriptKnowledge/assets/151070992/b4d8ef11-04cb-4f59-847d-c73f7ada0658">
+<img width="1320" alt="Screenshot 2024-02-28 at 2 40 08 PM" src="https://github.com/paigepreziosi/TestYourJavascriptKnowledge/assets/151070992/7a70dbb3-17a6-4d5b-a80d-dd33d4670c61">
+<img width="1529" alt="Screenshot 2024-02-28 at 2 40 21 PM" src="https://github.com/paigepreziosi/TestYourJavascriptKnowledge/assets/151070992/9b39f12b-1b95-40fe-b70e-3548a102da04">
+<img width="1486" alt="Screenshot 2024-02-28 at 2 41 15 PM" src="https://github.com/paigepreziosi/TestYourJavascriptKnowledge/assets/151070992/33a26455-8cf5-4ee7-a933-6683a1f56cfd">
+
+
+
+
+
+
 # Test Your Javascript Knowledge Quiz
 
 ## Table of Contents
